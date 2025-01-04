@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Saúde Começa com uma Alimentação Saudável</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>A Saúde Começa com uma Alimentação Saudável</h1>
+    </header>
+    <main>
+        <section id="habitos">
+            <h2>Bons Hábitos de Alimentação</h2>
+            <ul>
+                <li>Inclua fibras frutas e vegetais na sua dieta diária.</li>
+                <li>Evite alimentos processados e açucarados.</li>
+                <li>Beba bastante água.</li>
+                <li>Faça refeições regulares e equilibradas.</li>
+                <li>Modere o consumo de sal e gorduras.</li>
+            </ul>
+            <h2>Esses hábitos podem fazer uma grande diferença no seu bem-estar geral. Lembre-se que pequenas mudanças ao longo do tempo podem levar a grandes resultados! 🌱</h2>
+        </section>
+        <section id="calculadora-imc">
+            <h2>Calculadora de IMC</h2>
+            <form id="imc-form">
+                <label for="altura">Altura (em metros):</label>
+                <input type="number" id="altura" step="0.01" required>
+                <label for="peso">Peso (em kg):</label>
+                <input type="number" id="peso" step="0.1" required>
+                <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+            </form>
+            <div id="resultado"></div>
+            <div id="imagem-imc"></div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
