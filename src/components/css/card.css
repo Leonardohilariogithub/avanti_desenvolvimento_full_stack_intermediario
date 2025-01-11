@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Para ajustar os cards em linhas adicionais se o espaço for pequeno */
+}
+
+.card {
+  background-color: #d8151524;
+  border: 1px solid #21c42e79;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 1em;
+  color: #da1e1e;
+}
