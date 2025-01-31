@@ -1,75 +1,26 @@
-/*
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import CategoryPage from "./pages/CategoryPage";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
+import { CartProvider } from "./contexts/CartContext";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/categoria/:category" element={<CategoryPage />} />
+          <Route path="/produto/:id" element={<ProductDetails />} />
+          <Route path="/carrinho" element={<Cart />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
-}
-
-export default App;
-*/
-
-import Titulo from './components/titulo.js';
-import Card from './components/card.js';
-import Botao from './components/botao.js';
-
-import Titulocss from './components/css/titulo.css';
-import Cardcss from './components/css/card.css';
-import Botaocss from './components/css/botao.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="titulo"> Meu Projeto React </header>
-      <Titulo />
-      <Card />
-      <Botao /> 
-
-      <br></br>
-      <div>=====</div>
-
-      <div className="card">
-         <h2 className="card-title">Trabalho</h2>
-         <p className="card-content">Este é o conteúdo do Trabalho.</p> 
-         <button className="botao">Clique Aqui</button> 
-      </div>   
-
-      <div className="card">
-         <h2 className="card-title">Trabalho</h2>
-         <p className="card-content">Este é o conteúdo do Trabalho.</p> 
-         <button className="botao">Clique Aqui</button> 
-      </div>  
-
-      <div className="card">
-         <h2 className="card-title">Trabalho</h2>
-         <p className="card-content">Este é o conteúdo do Trabalho.</p> 
-         <button className="botao">Clique Aqui</button> 
-      </div>  
-
-      <br></br>
-      <div>=====</div>
-
-      
-    </div>
-    
-  );
-}
+};
 
 export default App;
