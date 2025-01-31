@@ -1,3 +1,13 @@
+Configuração do react no pages do github:
+npm install gh-pages --save-dev
+Yarn add -D gh-pages
+"homepage": "https://Leonardohilariogithub.github.io/avanti_desenvolvimento_full_stack_intermediario", 
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+Git add .
+OBS: tem que ter "npm install react-router-dom" instalado
+npm run deploy
+
 # Projeto Integrador - Desafio do Nível Intermediário
 
 Projeto Integrador - Desenvolvimento de um Site de Vendas Utilizando React
